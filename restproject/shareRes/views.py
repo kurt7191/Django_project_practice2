@@ -59,5 +59,8 @@ def restaurantDetail(request,res_id):
     content = {'restaurant':restaurant}
     return render(request, 'shareRes/restaurantDetail.html', content)
 
-    
+def restaurantUpdate(request, res_id):
+    categories = Category.objects.all()
+    content = {'categories' : categories}
+    return render(request, 'shareRes/restaurantUpdate.html', content)
  
